@@ -1,0 +1,8 @@
+*.pyc
+env/
+.terraform
+.env
+staticfiles/
+media
+media/
+seeders.py
