@@ -31,6 +31,7 @@ psycopg2 = "==2.8.4"
 django-storages = "*"
 djangorestframework-jwt = "*"
 faker = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
