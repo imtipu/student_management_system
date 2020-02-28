@@ -1,2 +1,2 @@
 release: python3 manage.py migrate
-web: waitress myproject.wsgi
+web: gunicorn student_management_system.wsgi

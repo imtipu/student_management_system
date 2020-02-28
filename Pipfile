@@ -32,6 +32,7 @@ django-storages = "*"
 djangorestframework-jwt = "*"
 faker = "*"
 django-heroku = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
