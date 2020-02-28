@@ -4,26 +4,33 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+faker = "*"
 
 [packages]
 django = "==2.2.8"
 django-environ = "*"
 waitress = "*"
 whitenoise = "*"
+django-cors-headers = "*"
 djangorestframework = "*"
 django-bootstrap4 = "*"
 django-allauth = "*"
 django-rest-auth = "*"
 django-extensions = "*"
 drf-yasg = "*"
-djangorestframework-filters = "*"
 django-crispy-forms = "*"
 django-cleanup = "*"
 coreapi = "*"
 django-rest-swagger = "*"
 djangorestframework-simplejwt = "*"
+djangorestframework-datatables = "*"
 django-debug-toolbar = "*"
-django-filter = "*"
+django-filter = "==2.2.0"
+Pillow = "*"
+psycopg2 = "==2.8.4"
+django-storages = "*"
+djangorestframework-jwt = "*"
+faker = "*"
 
 [requires]
 python_version = "3.7"
