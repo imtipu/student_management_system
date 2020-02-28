@@ -13,7 +13,7 @@ from teachers.api.v1.serializers import *
 class TeacherViewSet(viewsets.ModelViewSet):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAdminUser, IsAuthenticated]
-    serializer_class = TeacherSerializer
+    serializer_class = None
 
     pagination_class = PageNumberPagination
 
@@ -25,4 +25,13 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         return User.objects.filter(user_type="teacher")
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return TeacherSignupSerlizaer
+        else:
+            return TeacherSerializer
+
+
+
 

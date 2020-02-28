@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-import django_heroku
 import datetime
 import os
 import environ
@@ -233,6 +232,7 @@ JWT_AUTH = {
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
+    'users.backends.EmailUsernameLoginBackend',
     # `allauth` specific authentication methods, such as login by e-mail
 )
 # Internationalization
@@ -261,4 +261,3 @@ STATICFILES_DIRS = (
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-django_heroku.settings(locals())

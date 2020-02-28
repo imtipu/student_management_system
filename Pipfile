@@ -31,7 +31,6 @@ psycopg2 = "==2.8.4"
 django-storages = "*"
 djangorestframework-jwt = "*"
 faker = "*"
-django-heroku = "*"
 gunicorn = "*"
 
 [requires]
