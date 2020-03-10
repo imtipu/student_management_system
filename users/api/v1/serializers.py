@@ -21,3 +21,19 @@ class LoggedUserSerializer(serializers.ModelSerializer):
             'is_superuser',
             'date_joined',
         ]
+
+
+class UserInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'id',
+            'username',
+            'full_name',
+            'email',
+            'first_name',
+            'last_name',
+            'user_type',
+            'is_active',
+            'date_joined',
+        ]
