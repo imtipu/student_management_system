@@ -11,7 +11,7 @@ from students.api.v1.serializers import *
 
 class StudentViewSet(viewsets.ModelViewSet):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAdminUser, IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = StudentSerializer
 
     pagination_class = PageNumberPagination
@@ -28,7 +28,7 @@ class StudentViewSet(viewsets.ModelViewSet):
 
 class StudentClassViewSet(viewsets.ModelViewSet):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAdminUser, IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = StudentClassSerializer
     pagination_class = PageNumberPagination
 
@@ -42,7 +42,7 @@ class StudentClassViewSet(viewsets.ModelViewSet):
 
 class StudentsInClassViewSet(viewsets.ModelViewSet):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAdminUser, IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = StudentsInClassSerializer
 
     queryset = StudentsInClass.objects.all()

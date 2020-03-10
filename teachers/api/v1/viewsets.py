@@ -12,7 +12,7 @@ from teachers.api.v1.serializers import *
 
 class TeacherViewSet(viewsets.ModelViewSet):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAdminUser, IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = None
 
     pagination_class = PageNumberPagination
